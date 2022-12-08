@@ -1,8 +1,10 @@
 .rightBar {
+  background-color: whitesmoke;
+  border: #2d2d30;
   flex: 3;
   position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
+  top: 68px;
+  height: calc(100vh - 68px);
   overflow: scroll;
   &::-webkit-scrollbar {
     display: none;

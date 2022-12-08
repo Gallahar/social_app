@@ -1,0 +1,54 @@
+.post{
+.container{
+  padding: 20px;
+  background-color: whitesmoke;
+  border:1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.09);
+  .content{
+    margin: 20px 0;
+    img{
+      max-width: 100%;
+      max-height: 50%;
+      object-fit: cover;
+    }
+  }
+  .interactiveButtons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .item{
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .userInfo{
+      display: flex;
+      gap: 10px;
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .details{
+        display: flex;
+        flex-direction: column;
+        .name{
+        font-weight: 600;
+        }
+        .date{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+}

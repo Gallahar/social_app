@@ -17,6 +17,7 @@
   padding: 15px 15px;
   border:1px solid lightgray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.09);
+  z-index: 10;
 
 
   .left{
@@ -39,9 +40,12 @@
       width: 300px;
       transition: 0.2s ease-in-out;
       border: none;
+      border-radius: 3px;
+      background-color: transparent;
       &:focus{
         transition: 0.2s ease-in-out;
         width: 450px;
+        outline: none;
       }
     }
     }
