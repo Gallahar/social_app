@@ -10,6 +10,7 @@ import PlaceIcon from "@mui/icons-material/Place";
 import LanguageIcon from "@mui/icons-material/Language";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Posts } from "../../components/Posts";
 const Profile = () => {
   const { user } = useSelector(selectAuth);
   return (
@@ -64,6 +65,7 @@ const Profile = () => {
             <MoreVertIcon />
           </div>
         </div>
+        <Posts />
       </div>
     </div>
   );

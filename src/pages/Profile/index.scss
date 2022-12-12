@@ -1,9 +1,11 @@
+@import "../../index";
 .profile{
   background-color: whitesmoke;
 .imgContainer{
   width: 100%;
   height: 300px;
   position: relative;
+
   .background{
     width: 100%;
     height: 100%;
@@ -19,12 +21,22 @@
     right: 0;
     top: 200px;
     margin:auto;
+    @include mobile{
+      top:150px
+
+    }
 
   }
 }
   .profileContainer{
     padding: 20px 70px;
+    @include mobile{
+      padding: 20px 10px;
+
+    }
+
     .socialsContainer{
+      margin-bottom: 20px;
       background-color: white;
       padding: 50px;
       height: 180px;
@@ -34,14 +46,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include mobile{
+        flex-direction: column;
+
+      }
       .left{
         flex: 1;
         display: flex;
         gap: 10px;
-        opacity: 0.7;
-        a:visited, a:hover, a:focus {
+        color: grey;
+        @include tablet{
+          flex-wrap: wrap;
+        }
+        a:visited, a:focus {
+          cursor: pointer;
           text-decoration: none;
-          color: #000;
+          color: grey;
+
         }
       }
       .center{

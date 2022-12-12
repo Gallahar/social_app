@@ -1,4 +1,5 @@
-﻿.navbar{
+﻿@import "../../index";
+.navbar{
   .themeIcon{
     cursor:pointer;
     transform: translateX(25%);
@@ -18,6 +19,9 @@
   border:1px solid lightgray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.09);
   z-index: 10;
+  @include mobile{
+    width: 375px;
+  }
 
 
   .left{
@@ -42,15 +46,30 @@
       border: none;
       border-radius: 3px;
       background-color: transparent;
+      @include tablet{
+        width: 50%;
+      }
+      @include mobile{
+        display: none;
+      }
       &:focus{
         transition: 0.2s ease-in-out;
         width: 450px;
         outline: none;
+        @include tablet{
+          width: 225px
+        }
       }
     }
     }
   }
   .right{
+    @include mobile{
+      display: none;
+    }
+    @include tablet{
+      display: none;
+    }
     gap: 15px;
     display: flex;
     align-items: center;

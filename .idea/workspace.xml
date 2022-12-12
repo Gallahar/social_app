@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="86c5d15f-ca44-4e41-b4e0-50f39aaee798" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/social-link-app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@types/media.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/media.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgBackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Comments/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Comments/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Comments/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Comments/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stories/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stories/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/leftBar/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leftBar/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navBar/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navBar/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rightBar/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rightBar/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/theme/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/theme/slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getThemeLSData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getThemeLSData.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2IGQRZoWdfCuMvPb1jghImugzO5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Gallahar\Projects\social-link-app\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gallahar\Projects\social-link-app\src" />
+      <recent name="C:\Users\Gallahar\Projects\social-link-app\src\Layouts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86c5d15f-ca44-4e41-b4e0-50f39aaee798" name="Changes" comment="" />
+      <created>1669805433927</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669805433927</updated>
+      <workItem from="1669805436619" duration="37597000" />
+      <workItem from="1669999497524" duration="112634000" />
+      <workItem from="1670787764879" duration="309000" />
+      <workItem from="1670788100929" duration="869000" />
+      <workItem from="1670789151402" duration="722000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

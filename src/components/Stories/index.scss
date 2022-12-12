@@ -1,9 +1,13 @@
+@import "../../index";
 .stories{
   display: flex;
   justify-content: center;
   gap: 10px;
   height: 250px;
   margin-bottom: 30px;
+  @include mobile{
+   height: 50%;
+  }
   .story{
     position: relative;
     flex: 1;

@@ -1,18 +1,19 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IAuthState, TAuthUser } from "./types";
+import { getUserLSData } from "../../utils/getUserLSData";
 
 const initialState: IAuthState = {
-  user: null,
+  user: getUserLSData(),
 };
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setAuth: (state, action: PayloadAction<TAuthUser>) => {
+    setLogin: (state, action: PayloadAction<TAuthUser>) => {
       state.user = action.payload;
     },
   },
 });
-export const { setAuth } = authSlice.actions;
+export const { setLogin } = authSlice.actions;
 export default authSlice.reducer;

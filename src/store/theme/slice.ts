@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TThemeState } from "./types";
+import { getThemeLSData } from "../../utils/getThemeLSData";
 
 const initialState: TThemeState = {
-  theme: false,
+  theme: getThemeLSData(),
 };
 const themeSlice = createSlice({
   name: "theme",

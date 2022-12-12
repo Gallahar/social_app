@@ -4,5 +4,7 @@ export interface IAuthState {
 
 export type TAuthUser = {
   id: string;
+  userName: string;
   imgUrl: string;
+  profilePicture: string;
 };

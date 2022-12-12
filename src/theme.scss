@@ -1,0 +1,50 @@
+.dark{
+  .profile{
+    transition: 0.25s ease-in-out;
+    background-color: #3e3e42;
+    color: whitesmoke;
+    .container{
+      background-color: #3e3e42;
+      border: 1px solid #2d2d30;
+    }
+    .socialsContainer{
+      background-color: #3e3e42;
+      border: 1px solid #2d2d30;
+    }
+  }
+  .home{
+    transition: 0.25s ease-in-out;
+    background-color: #3e3e42;
+    color: whitesmoke;
+    .container{
+      background-color: #3e3e42;
+      border: 1px solid #2d2d30;
+    }
+  }
+  .leftBar{
+    transition: 0.20s ease-in-out;
+    background-color: #373534;
+    color: whitesmoke;
+    border: 1px solid #2d2d30;
+  }
+  .rightBar{
+    transition: 0.25s ease-in-out;
+    background-color:  #3e3e42;
+    color: whitesmoke;
+    .item{
+      transition: 0.25s ease-in-out;
+      background-color:  #373534;
+      border: 1px solid #2d2d30;
+    }
+  }
+  .navbar{
+    transition: 0.15s ease-in-out;
+    background-color: #373534;
+    color: whitesmoke;
+    border: 1px solid #2d2d30;
+    input{
+      color: whitesmoke;
+    }
+  }
+
+}

@@ -1,6 +1,10 @@
-import "index.scss";
+import "./index.scss";
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectAuth } from "../../store/auth/selectors";
 
 export const Comments = () => {
+  const { user } = useSelector(selectAuth);
   const comments = [
     {
       id: 1,
@@ -30,13 +34,19 @@ export const Comments = () => {
 
   return (
     <div className={"comments"}>
+      <div className={"leaveComment"}>
+        <img src={user ? user.imgUrl : ""} alt={"userImage"} />
+        <input type={"text"} placeholder={"leave comment?"} />
+        <button>comment</button>
+      </div>
       {comments.map((comment) => (
         <div key={comment.userId} className={"comment"}>
+          <img src={comment.userImage} />
           <div className={"userInfo"}>
-            <img src={comment.userImage} />
             <span>{comment.userName}</span>
+            <p>{comment.description}</p>
           </div>
-          <p>{comment.description}</p>
+          <span className={"date"}>1 minute ago</span>
         </div>
       ))}
     </div>

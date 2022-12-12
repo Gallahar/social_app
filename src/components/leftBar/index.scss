@@ -1,3 +1,4 @@
+@import "../../index";
 .leftBar{
   flex: 2;
   position: sticky;
@@ -6,6 +7,10 @@
   border: 1px solid lightgray;
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.09);
   overflow: scroll;
+
+  @include mobile{
+    display: none;
+  }
   &::-webkit-scrollbar{
     display: none;
   }
