@@ -2,6 +2,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TThemeState } from "./types";
 import { getThemeLSData } from "../../utils/getThemeLSData";
 
+
+
+
+
 const initialState: TThemeState = {
   theme: getThemeLSData(),
 };

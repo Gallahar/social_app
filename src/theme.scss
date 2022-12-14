@@ -6,6 +6,7 @@
     .container{
       background-color: #3e3e42;
       border: 1px solid #2d2d30;
+      border-radius: 20px;
     }
     .socialsContainer{
       background-color: #3e3e42;
@@ -19,6 +20,10 @@
     .container{
       background-color: #3e3e42;
       border: 1px solid #2d2d30;
+      border-radius: 20px;
+      input{
+        color: whitesmoke;
+      }
     }
   }
   .leftBar{
