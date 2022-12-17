@@ -14,16 +14,19 @@ import fundraiser from "../../assets/13.png";
 import tutorials from "../../assets/11.png";
 import courses from "../../assets/12.png";
 import { useSelector } from "react-redux";
-import { selectAuth } from "../../store/auth/selectors";
+import { selectCurrentUser } from "../../store/auth/selectors";
 export const LeftBar = () => {
-  const { user } = useSelector(selectAuth);
+  const user = useSelector(selectCurrentUser);
   return (
     <div className={"leftBar"}>
       <div className={"container"}>
         <div className={"menu"}>
           <div className={"user"}>
-            <img src={user ? user.imgUrl : userSVG} alt="user" />
-            <span>{user ? user.userName : "James Brune"}</span>
+            <img
+              src={user?.profilePic ? user.profilePic : userSVG}
+              alt="user"
+            />
+            <span>{user ? user.username : "James Brune"}</span>
           </div>
           <div className={"item"}>
             <img src={friends} alt="friends" />

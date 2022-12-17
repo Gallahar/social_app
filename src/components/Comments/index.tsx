@@ -1,10 +1,11 @@
 import "./index.scss";
+import blank from "../../assets/user.svg";
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectAuth } from "../../store/auth/selectors";
+import { selectCurrentUser } from "../../store/auth/selectors";
 
 export const Comments = () => {
-  const { user } = useSelector(selectAuth);
+  const user = useSelector(selectCurrentUser);
   const comments = [
     {
       id: 1,
@@ -35,7 +36,10 @@ export const Comments = () => {
   return (
     <div className={"comments"}>
       <div className={"leaveComment"}>
-        <img src={user ? user.imgUrl : ""} alt={"userImage"} />
+        <img
+          src={user?.profilePic ? user.profilePic : blank}
+          alt={"userImage"}
+        />
         <input type={"text"} placeholder={"leave comment?"} />
         <button>comment</button>
       </div>

@@ -1,6 +1,7 @@
 import "./index.scss";
+import blank from "../../assets/user.svg";
 import { useSelector } from "react-redux";
-import { selectAuth } from "../../store/auth/selectors";
+import { selectCurrentUser } from "../../store/auth/selectors";
 
 const stories = [
   {
@@ -24,13 +25,13 @@ const stories = [
 ];
 
 export const Stories = () => {
-  const { user } = useSelector(selectAuth);
+  const user = useSelector(selectCurrentUser);
 
   return (
     <div className={"stories"}>
       <div className={"story"}>
-        <img src={user ? user.imgUrl : ""} alt={"story"} />
-        <span>{user ? user.userName : ""}</span>
+        <img src={user?.profilePic ? user.profilePic : blank} alt={"story"} />
+        <span>{user ? user.username : "John Doe"}</span>
         <button>+</button>
       </div>
       {stories.map((story) => (

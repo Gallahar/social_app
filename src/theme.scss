@@ -3,6 +3,7 @@
     transition: 0.25s ease-in-out;
     background-color: #3e3e42;
     color: whitesmoke;
+
     .container{
       background-color: #3e3e42;
       border: 1px solid #2d2d30;
@@ -17,13 +18,16 @@
     transition: 0.25s ease-in-out;
     background-color: #3e3e42;
     color: whitesmoke;
+    .share{
+      input{
+        color: whitesmoke;
+      }
+    }
     .container{
       background-color: #3e3e42;
       border: 1px solid #2d2d30;
       border-radius: 20px;
-      input{
-        color: whitesmoke;
-      }
+
     }
   }
   .leftBar{

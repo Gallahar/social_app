@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren, ReactElement, ReactNode } from "react";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -12,11 +12,15 @@ import {
 } from "react-router-dom";
 import { MainLayout } from "./Layouts/mainLayout";
 import { useSelector } from "react-redux";
-import { selectAuth } from "./store/auth/selectors";
+import { selectCurrentUser } from "./store/auth/selectors";
+
+type TProtectedRouteProps = {
+  children: ReactElement;
+};
 
 function App() {
-  const { user } = useSelector(selectAuth);
-  const ProtectedRoute = ({ children }: any) => {
+  const user = useSelector(selectCurrentUser);
+  const ProtectedRoute: React.FC<TProtectedRouteProps> = ({ children }) => {
     if (!user) {
       return <Navigate to="/login" />;
     }

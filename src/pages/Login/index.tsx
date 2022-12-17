@@ -1,33 +1,46 @@
+import React from "react";
 import styles from "./index.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../store";
 import { setLogin } from "../../store/auth/slice";
+import axios, { AxiosError } from "axios";
+import { TAuthCurrentUser, TInputLogin } from "../../store/auth/types";
 
 const Login = () => {
+  const [error, setError] = React.useState<null | string>(null);
   const dispatch = useAppDispatch();
-  const onClickLogin = () => {
-    dispatch(
-      setLogin({
-        id: "1",
-        userName: "David Kushnir",
-        imgUrl:
-          "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        profilePicture:
-          "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      })
-    );
-    localStorage.setItem(
-      "user",
-      JSON.stringify({
-        id: "1",
-        userName: "David Kushnir",
-        imgUrl:
-          "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        profilePicture:
-          "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      })
-    );
+  const navigate = useNavigate();
+  const [input, setInput] = React.useState<TInputLogin>({
+    username: "",
+    password: "",
+  });
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInput((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
+  const onClickLogin = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    try {
+      const data = await axios.post<TAuthCurrentUser>(
+        "http://localhost:8900/server/auth/login",
+        input
+      );
+      console.log(data);
+      dispatch(setLogin(data.data));
+      localStorage.setItem("user", JSON.stringify(data));
+      navigate("/");
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        setError(error?.response?.data);
+      } else {
+        alert(
+          "something went wrong, try refresh the page, or check the credentials!"
+        );
+        console.error(error);
+      }
+    }
+  };
+
   return (
     <div className={styles.login}>
       <div className={styles.card}>
@@ -45,8 +58,19 @@ const Login = () => {
         <div className={styles.right}>
           <h1>Login</h1>
           <form>
-            <input type="text" placeholder="UserName" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="text"
+              placeholder="UserName"
+              name="username"
+              onChange={handleInput}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleInput}
+            />
+            {error ? <div style={{ color: "red" }}>{error}</div> : ""}
             <button onClick={onClickLogin}>Login</button>
           </form>
         </div>

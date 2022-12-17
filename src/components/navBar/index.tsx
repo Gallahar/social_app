@@ -1,5 +1,5 @@
 import "./index.scss";
-import userPng from "../../assets/user.svg";
+import blank from "../../assets/user.svg";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/GiteOutlined";
 import ThemeIcon from "@mui/icons-material/Brightness6Outlined";
@@ -11,11 +11,11 @@ import NotificationIcon from "@mui/icons-material/CircleNotificationsOutlined";
 import React from "react";
 import { useAppDispatch } from "../../store";
 import { setTheme } from "../../store/theme/slice";
-import { TAuthUser } from "../../store/auth/types";
+import { TAuthCurrentUser } from "../../store/auth/types";
 
 type TNavBarProps = {
   theme: boolean;
-  user: TAuthUser | null;
+  user: TAuthCurrentUser | null;
 };
 
 export const NavBar: React.FC<TNavBarProps> = React.memo(({ theme, user }) => {
@@ -52,8 +52,8 @@ export const NavBar: React.FC<TNavBarProps> = React.memo(({ theme, user }) => {
         <MessageIcon />
         <NotificationIcon />
         <div className={"user"}>
-          <img src={user ? user.imgUrl : userPng} alt="user" />
-          <span>{user ? user.userName : "John Doe"}</span>
+          <img src={user?.profilePic ? user.profilePic : blank} alt="user" />
+          <span>{user ? user.username : "John Doe"}</span>
         </div>
       </div>
     </div>

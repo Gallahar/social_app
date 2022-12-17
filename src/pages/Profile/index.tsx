@@ -1,6 +1,8 @@
 import "./index.scss";
+import backgroundBlank from "../../assets/dafault.jpg";
+import blank from "../../assets/user.svg";
 import { useSelector } from "react-redux";
-import { selectAuth } from "../../store/auth/selectors";
+import { selectCurrentUser } from "../../store/auth/selectors";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -12,17 +14,17 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Posts } from "../../components/Posts";
 const Profile = () => {
-  const { user } = useSelector(selectAuth);
+  const user = useSelector(selectCurrentUser);
   return (
     <div className={"profile"}>
       <div className={"imgContainer"}>
         <img
-          src={user ? user.profilePicture : ""}
+          src={user?.backgroundPic ? user.backgroundPic : backgroundBlank}
           alt={"profilePicture"}
           className={"background"}
         />
         <img
-          src={user ? user.imgUrl : ""}
+          src={user?.profilePic ? user.profilePic : blank}
           alt={"userPicture"}
           className={"userImg"}
         />
