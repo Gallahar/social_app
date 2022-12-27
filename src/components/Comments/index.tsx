@@ -3,35 +3,38 @@ import blank from "../../assets/user.svg";
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/auth/selectors";
+import { dataApi } from "../../store/api";
+import { TComment } from "../../store/api/types";
+import { SerializedError } from "@reduxjs/toolkit";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 
-export const Comments = () => {
+import { Comment } from "../Comment";
+
+type TCommentProps = {
+  postId: number;
+  data: TComment[];
+  error: FetchBaseQueryError | SerializedError | undefined;
+  isLoading: boolean;
+};
+
+export const Comments: React.FC<TCommentProps> = ({
+  postId,
+  data,
+  error,
+  isLoading,
+}) => {
   const user = useSelector(selectCurrentUser);
-  const comments = [
-    {
-      id: 1,
-      description: "fdsaojfoidsjagpojisag[jds[fsdjag[sdaijg[sajig",
-      userId: 1,
-      userName: "Harley Wins",
-      userImage:
-        "https://images.unsplash.com/photo-1604607055958-4def78942d6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    },
-    {
-      id: 2,
-      description: "fdsaojfoidsjagpojisag[jds[fsdjag[sdaijg[sajig",
-      userId: 2,
-      userName: "Harley Wins",
-      userImage:
-        "https://images.unsplash.com/photo-1604607055958-4def78942d6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    },
-    {
-      id: 3,
-      description: "fdsaojfoidsjagpojisag[jds[fsdjag[sdaijg[sajig",
-      userId: 3,
-      userName: "Harley Wins",
-      userImage:
-        "https://images.unsplash.com/photo-1604607055958-4def78942d6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    },
-  ];
+  const [createComment] = dataApi.useCreateCommentMutation();
+  const [input, setInput] = React.useState("");
+
+  const onClickComment = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    await createComment({
+      description: input,
+      postId,
+    });
+    setInput("");
+  };
 
   return (
     <div className={"comments"}>
@@ -40,19 +43,18 @@ export const Comments = () => {
           src={user?.profilePic ? user.profilePic : blank}
           alt={"userImage"}
         />
-        <input type={"text"} placeholder={"leave comment?"} />
-        <button>comment</button>
+        <input
+          type={"text"}
+          onChange={(e) => setInput(e.target.value)}
+          value={input}
+          placeholder={"leave comment?"}
+        />
+        <button onClick={onClickComment}>comment</button>
       </div>
-      {comments.map((comment) => (
-        <div key={comment.userId} className={"comment"}>
-          <img src={comment.userImage} />
-          <div className={"userInfo"}>
-            <span>{comment.userName}</span>
-            <p>{comment.description}</p>
-          </div>
-          <span className={"date"}>1 minute ago</span>
-        </div>
-      ))}
+      {isLoading && <h1>Comments loading...</h1>}
+      {error && <h1>something went wrong, try refresh the page</h1>}
+      {data &&
+        data.map((comment) => <Comment key={comment.id} comment={comment} />)}
     </div>
   );
 };

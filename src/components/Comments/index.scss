@@ -38,6 +38,26 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 20px 0 20px;
+
+
+  .clear{
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    border-radius: 20px;
+    border: 1px solid ;
+    opacity: 0.5;
+    transition: 0.15s ease-in-out;
+    &:hover{
+      transition: 0.15s ease-in-out;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+  }
 
   .userInfo{
     flex:5;
