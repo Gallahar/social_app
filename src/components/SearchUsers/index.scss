@@ -1,0 +1,91 @@
+
+.searchUsers {
+  width: 50%;
+  height: 80%;
+  border-radius: 8px;
+  background-color: white;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .container{
+    margin: 5px;
+    border-top: 1px dashed lightgray;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-size: 1.4em;
+    }
+
+    .input {
+      position: relative;
+      height: 20px;
+      border: 1px solid lightgray;
+      padding: 5px;
+      border-radius: 10px;
+      width: 300px;
+
+      &:has(input:focus) {
+        border: 1px solid red;
+
+      }
+
+     input{
+       border: none;
+       background-color: transparent;
+      width: 90%;
+       &:focus{
+         outline: none;
+       }
+     }
+    }
+    button{
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 0.5px solid lightgray;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        box-shadow: 0 0 3px 0.5px rgba(0,0,0,.4);
+      }
+      &:active{
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  .close {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      margin: 20px;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      background-color: violet;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
